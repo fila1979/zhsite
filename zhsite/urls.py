@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     # develop static
 
     url('^static/$', 'django.views.static.serve',
-        {'document_root': 'c:/poligon/zhsite/static/'}
+        {'document_root': '/zhsite/static/'}
         )
 
 
