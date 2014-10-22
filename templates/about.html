@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/superfish.css">
+    <link rel="stylesheet" href="/static/css/stuck.css">
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery-migrate-1.2.1.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <script src="/static/js/jquery.mobilemenu.js"></script>
+
+    <script src="/static/js/jquery.ui.totop.js"></script>
+    <script src="/static/js/tmStickUp.js"></script>
+
+    <!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+<!--==============================header=================================-->
+<header>
+    <div class="h-top" id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h1>
+                        <a href="/index">
+                            Hurricane
+                            <span>Shutters</span>
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul class="sf-menu">
+                            <li><a href="/index">Home</a></li>
+                            <li class="current"><a href="/about">About</a>
+                                <ul>
+                                    <li><a href="#">Lorem ipsum dolor sit amet </a></li>
+                                    <li><a href="#">Conse ctetur adipisicing </a></li>
+                                    <li><a href="#">Elit sed do eiusmod tempor</a></li>
+                                    <li><a href="#">Incididunt ut labore </a>
+                                        <ul>
+                                            <li><a href="#">Et dolore magna aliqua</a></li>
+                                            <li><a href="#">Ut enim ad minim veniam</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/product">Products</a></li>
+                            <li><a href="/projects">Projects</a></li>
+                            <li><a href="/contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--=======content================================-->
+
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid_8">
+                <h2>About Us</h2>
+                <div class="clearfix">
+                    <img src="/static/images/page-2_img-1.jpg" alt="" class="img-ind w1"/>
+                    <div>
+                        <div class="text-2">{{ main_art_about.mainArticleAbout_title }}</div>
+                        <div>{{ main_art_about.mainArticleAbout_body }}</div>
+
+
+                        <ul class="list">
+                            {% for link_about in link_about_imp %}
+                            <li><a href="#">{{ link_about.linkabout }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <h2>Testimonials</h2>
+                {% for art_second_about in art_second_imp %}
+                <div class="testimonials">
+                    <div class="testimonial_item">
+                        <div>{{ art_second_about.articleSecondAbout_body }}</div>
+                        <div class="text-2"><a href="#">{{ art_second_about.articleSecondAbout_author }}</a></div>
+                    </div>
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid_12">
+            {% for title_team in title_team_imp %}
+                <h2>{{ title_team.titleTeamAbout }}</h2>
+            </div>
+            <div class="clearfix team">
+                <div class="grid_3 box-2">
+                    <img src="/static/images/page-2_img-2.jpg" alt="">
+                    <div class="text-2"><a href="#">{{ title_team.titlePeople }}</a></div>
+                    <div>{{ title_team.titlePeople_body }}</div>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=======footer=================================-->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <div class="fright">
+                    <ul class="f-list">
+                        <li><a href="/index">Home</a></li>
+                        <li class="current"><a href="/about">About</a></li>
+                        <li><a href="/product">Products</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="contacts">Contacts</a></li>
+                    </ul>
+                    <ul class="social-icons clearfix">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                </div>
+                <div class="fleft">
+                    <a href="#" class="f-logo">Hurricane <span>Shutters</span></a>
+                    <div class="copyright">&copy; <span id="copyright-year"></span>.  <a href="index-5.html" class="h-underline">Privacy Policy</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
